@@ -1,4 +1,16 @@
 body {
     text-align: center;
-    
+
 }
+
+.row {
+    text-align: center;
+}
+
+.square {
+    display: inline-block;
+    width: 20%;
+    height: 20%;
+    background-color: green;
+}
+

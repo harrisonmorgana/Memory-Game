@@ -1,19 +1,5 @@
-function flash(id) {
-    
-}
-
-//const flash = (box) => {
-//    return new Promise((resolve, reject) => {
-//        box.className += 'active';
-//        setTimeout(() => { 
-//            box.className = box.className.replace(
-//                'active', 
-//                ' '
-//                );
-//                resolve();
-//        } , 1000)
-//    });
-//}
+var randomSequence = [];
+var userSequence = [];
 
 function sleep(milliseconds) {
   const date = Date.now();
@@ -23,21 +9,38 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
-
-function main() {
-    var sequence = ["topLeft", "topCenter", "middleLeft", "middleRight", "bottomCenter"];
-
+function flashRed(sequence) {
     for (box in sequence) {
         element = document.getElementById(sequence[box]);
         
         element.classList.add("active");
     }
+}
 
-    sleep(1000);
-
+function flashNormal(sequence) {
     for (box in sequence) {
         element = document.getElementById(sequence[box]);
         
         element.classList.remove("active");
     }
+}
+
+function flashSequence(sequence) {
+    
+    // Hardcode set Random Sequence -- needs automating
+    sequence = ["topLeft", "topCenter", "middleLeft", "middleRight", "bottomCenter"];
+    
+    // Reset userSequence
+    randomSequence = "";
+
+    flashRed(sequence);
+    
+    sleep(1000);
+    setTimeout(function(){ flashNormal(sequence); }, 1000);
+
+}
+
+function clicked(id) {
+    userSequence.push(id);
+    alert(userSequence);
 }

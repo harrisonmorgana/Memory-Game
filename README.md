@@ -1,9 +1,7 @@
 <h1>Harrison Morgan-Adams</h1>
-One or two paragraphs providing an overview of your project.
 
-Essentially, this part is your sales pitch.
+<h2>Randomzing Memory Game<h2>
 
-UX
 I started my process by looking at other memory games that I have used as well as mobile apps the way that they work. 
 I found that the websites incorporate bright colours, fun text and typography. This is something i wanted to impliment into my designs. 
 I started my designs by drawing the basics that I wanted to put on the website. The main thing is I wanted the input box for names and 9 equal sized boxes spread evenely accross the webiste. These boxes will change size and move depending on the size of the user device. 
@@ -62,10 +60,4 @@ Different configuration files?
 Separate git branch?
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
-Credits
-Content
-The text for section Y was copied from the Wikipedia article Z
-Media
-The photos used in this site were obtained from ...
-Acknowledgements
-I received inspiration for this project from X
+To create the modal that popped up to explain how to play the game I used the following link; https://www.w3schools.com/w3css/w3css_modal.asp. 

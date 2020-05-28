@@ -1,28 +1,18 @@
 // Set global variables
-var randomSequence = ["topLeft", "topCenter", "middleLeft", "middleRight", "bottomCenter"];
+var randomSequence = [];
 var userSequence = [];
 
-function randomizer() {
-    // Set random Numbers Array
-    randomNumbers = [];
-
-    // Set int i = 0
-    i=0;
-
-    // Loop 5 times
-    while (i < 6) {
-        // Get number
-        number = Math.floor(Math.random() * 6) + 1;
-        alert(number);
-        // Add to array
-        randomNumbers.push(number);
-
-        //Increment i
-        i++;
+function randomizer(IDs) {
+    while (randomSequence.length < 5) {
+        // Select random
+        var randomID = IDs[Math.floor(Math.random()*IDs.length)]
+        
+        // Ensure not already added 
+        if (!(randomSequence.includes(randomID))) {
+            // Add to array
+            randomSequence.push(randomID);
+        }
     }
-
-    // return Numbers
-    return randomNumbers;
 }
 
 function sleep(milliseconds) {
@@ -50,22 +40,22 @@ function flashNormal(sequence) {
 }
 
 function flashSequence(sequence) {
-    
-    //Get random numbers
-    randomNumbers = randomizer();
-
-    alert(randomNumbers);
-
-
-
-    // Reset userSequence
+    // Reset Arrays
     userSequence.length = 0;
+    randomSequence.length = 0;
+    
+    // HARD CODED - SHOULD BE IMPROVED
+    // Get div ID's
+    divIDs = ['topLeft', 'topCenter', 'topRight', 'middleLeft', 'middleCenter', 'middleRight', 'bottomLeft', 'bottomCenter', 'bottomRight'];
 
+    // Random
+    randomizer(divIDs);
+
+    // Flash boxes
     flashRed(randomSequence);
     
     sleep(1000);
     setTimeout(function(){ flashNormal(randomSequence); }, 1000);
-
 }
 
 function clicked(id) {
@@ -96,5 +86,9 @@ function compareResults() {
             // No Match
             alert("Better luck next time!");
         }
+
+        // Reset Arrays
+        randomSequence.length = 0;
+        userSequence.length = 0;
     }
 }

@@ -1,7 +1,5 @@
 body {
     text-align: center;
-    background-image: url('head.jpg');
-    background-repeat: repeat-y;
 }
 
 .row{
@@ -72,6 +70,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
+  background-image: url("img/background.img");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -125,18 +124,7 @@ header.masthead {
     background-color: red;
 }
 
-@charset "UTF-8";
-/*!
-* Start Bootstrap - Agency v6.0.3 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -193,7 +181,6 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -218,7 +205,6 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   cursor: help;

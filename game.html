@@ -1,72 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Marvel Match</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="game.js"></script>
-    
-    <title>Randomizing Memory Game</title>
-</head>
-<body>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="masthead">
+            <div class="container">
+            <div class="text-center">
+                <img src="css/img/header.jpg" class="rounded" alt="marvel match">
+            </div>
+            <p class="justify-content-center">Welcome to the Matching Marvel Memory Game</p>
+                <div class="form-group">
+                        <label class="sr-only">Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+                    </div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="game.html">play</a>
+            </div>
 
-<h1>Randomizing Memory Game</h1>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Instructions
-</button>
-<button type="button" class="btn btn-primary" onclick="flashSequence()">
-  Play
-</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">How To Play! </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <ul>
-        <li>The Boxes will flash red in Sequence</li>
-        <li>Your job is to match the sequence by clicking on the correct box</li>
-        <li>The game will end once the incorrect Sequence has selected</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to the game!</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row justify-content-center">
-    <div class="box top-right-box" id="topLeft" onclick="clicked(this.id)"></div>
-    <div class="box top-middle-box" id="topCenter" onclick="clicked(this.id)"></div>
-    <div class="box top-left-box" id="topRight" onclick="clicked(this.id)"></div>
-</div>
-<div class="row justify-content-center">
-    <div class="box middle-right-box" id="middleLeft" onclick="clicked(this.id)"></div>
-    <div class="box middle-middle-box" id="middleCenter" onclick="clicked(this.id)"></div>
-    <div class="box midde-left-box" id="middleRight" onclick="clicked(this.id)"></div>
-</div>
-<div class="row justify-content-center">
-    <div class="box bottom-right-box" id="bottomLeft" onclick="clicked(this.id)"></div>
-    <div class="box bottom-middle-box" id="bottomCenter" onclick="clicked(this.id)"></div>
-    <div class="box bottom-left-box" id="bottomRight" onclick="clicked(this.id)"></div>
-</div>
-
-<button type="button" class="btn btn-primary" onclick="compareResults()">
-  Submit
-</button>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
+        </header>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/game.js"></script>
+    </body>
 </html>
+

@@ -1,14 +1,26 @@
 body {
     text-align: center;
+    background-image: url("img/background.jpg");
 }
 
 p {
     font-family: 'Ubuntu', sans-serif;
     font-size: 2em;
 }
+img {
+    width: 10%;
+    height:20%
+}
 .row{
     text-align: center;
 
+}
+
+.fixedElement {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
 }
 
 .box {
